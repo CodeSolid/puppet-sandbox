@@ -16,6 +16,9 @@ in which case you may need
   sudo puppet agent --enable
 
 ```
+
+Make sure you use "sudo" each time you run this or you'll get key conflicts.
+
 (Original) Description
 ===========
 
