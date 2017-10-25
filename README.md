@@ -1,6 +1,24 @@
 Description
 ===========
 
+This is a fork of the elasticdog's puppet-sandbox.  The only real change
+needed was to add a modulepath entry to puppet.conf (as a copy of 
+basemodulepath), since for some reason the default for enviornments 
+as documented by puppet is not being honored at least for certain versions.
+
+With that, you may not see /tmp/hello created if you do "vagrant ssh client1" 
+in which case you may need
+
+```
+
+  sudo puppet agent --test
+  # (And possibly):
+  sudo puppet agent --enable
+
+```
+(Original) Description
+===========
+
 Puppet Sandbox is a multi-VM [Vagrant](http://vagrantup.com/)-based Puppet
 development environment used for creating and testing new modules outside
 of your production environment. It is prefered over the upstream [Learning
